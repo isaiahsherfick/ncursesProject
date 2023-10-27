@@ -1,0 +1,69 @@
+YAY OPTIONS (APPLY TO -Y AND --YAY)
+       <NO OPTION>
+              Displays  a  list  of  packages matching the search terms and prompts the user on which
+              packages to install (yogurt mode).
+
+--
+SHOW OPTIONS (APPLY TO -P AND --show)
+       -c, --complete
+              Print a list of all AUR and repo packages. This allows  shell  completion  and  is  not
+              intended to be used directly by the user.
+
+--
+              Passes  arguments  to  the  editor.  These flags get passed to every instance where the
+              editor is called by Yay. Arguments are split on whitespace before being passed  to  the
+              editor.  Multiple  arguments  may be passed by supplying a space separated list that is
+              quoted by the shell.
+
+--
+
+       --singlelineresults
+              Override  pacman's  usual  double-line search result format and list each result on its
+              own line.
+
+       --doublelineresults
+              Follow pacman's double-line search result format and list each result using two lines.
+
+       --devel
+--
+              not require the original pkgbuild to be downloaded.
+
+              The  slower  pacaur-like  devel  checks can be implemented manually by piping a list of
+              packages into yay (see examples).
+
+--
+
+       --useask
+              Use pacman's --ask flag to automatically confirm package conflicts. Yay lists conflicts
+              ahead of time. It is possible that Yay does not detect a conflict, causing a package to
+              be removed without the user's confirmation.  However, this is very unlikely.
+--
+              Passes  arguments to makepkg. These flags get passed to every instance where makepkg is
+              called by Yay. Arguments are split  on  whitespace  before  being  passed  to  makepkg.
+              Multiple  arguments may be passed by supplying a space separated list that is quoted by
+              the shell.
+
+--
+              Passes arguments to gpg. These flags get passed to every instance where gpg  is  called
+              by  Yay.  Arguments  are  split  on  whitespace  before  being  passed to gpg. Multiple
+              arguments may be passed by supplying a space separated  list  that  is  quoted  by  the
+              shell.
+
+--
+              Passes arguments to sudo. These flags get passed to every instance where sudo is called
+              by  Yay.  Arguments  are  split  on  whitespace  before  being passed to sudo. Multiple
+              arguments may be passed by supplying a space separated  list  that  is  quoted  by  the
+              shell.
+
+--
+
+       yay -Syu
+              Update package list and upgrade all currently installed repo and AUR.
+
+       yay -Sua
+--
+              directory will fall back to $HOME/.cache/yay.
+
+              completion.cache holds a list  of  of  all  packages,  including  the  AUR,  for  shell
+              completion. By default the completion files are refreshed every 7 days.
+
